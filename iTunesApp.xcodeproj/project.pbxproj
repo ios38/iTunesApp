@@ -16,6 +16,10 @@
 		508F8C7D267073AA00E916F0 /* iTunesAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 508F8C7C267073AA00E916F0 /* iTunesAppUITests.swift */; };
 		508F8C8C267075C600E916F0 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 508F8C8B267075C600E916F0 /* SnapKit */; };
 		508F8C8F267075F100E916F0 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 508F8C8E267075F100E916F0 /* Alamofire */; };
+		50AFA8D326708C3700B4CB50 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50AFA8D226708C3700B4CB50 /* AppCoordinator.swift */; };
+		50BD1B132670962B00660ECE /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50BD1B122670962B00660ECE /* ViewModel.swift */; };
+		50BD1B162670A17200660ECE /* BaseCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50BD1B152670A17200660ECE /* BaseCoordinator.swift */; };
+		50BD1B182670A1FD00660ECE /* ViewCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50BD1B172670A1FD00660ECE /* ViewCoordinator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +53,10 @@
 		508F8C78267073AA00E916F0 /* iTunesAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iTunesAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		508F8C7C267073AA00E916F0 /* iTunesAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iTunesAppUITests.swift; sourceTree = "<group>"; };
 		508F8C7E267073AA00E916F0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		50AFA8D226708C3700B4CB50 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		50BD1B122670962B00660ECE /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
+		50BD1B152670A17200660ECE /* BaseCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCoordinator.swift; sourceTree = "<group>"; };
+		50BD1B172670A1FD00660ECE /* ViewCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewCoordinator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,9 +109,11 @@
 		508F8C59267073A900E916F0 /* iTunesApp */ = {
 			isa = PBXGroup;
 			children = (
+				50BD1B142670A15100660ECE /* Coordinators */,
 				508F8C5A267073A900E916F0 /* AppDelegate.swift */,
 				508F8C5C267073A900E916F0 /* SceneDelegate.swift */,
 				508F8C5E267073A900E916F0 /* ViewController.swift */,
+				50BD1B122670962B00660ECE /* ViewModel.swift */,
 				508F8C63267073AA00E916F0 /* Assets.xcassets */,
 				508F8C65267073AA00E916F0 /* LaunchScreen.storyboard */,
 				508F8C68267073AA00E916F0 /* Info.plist */,
@@ -127,6 +137,16 @@
 				508F8C7E267073AA00E916F0 /* Info.plist */,
 			);
 			path = iTunesAppUITests;
+			sourceTree = "<group>";
+		};
+		50BD1B142670A15100660ECE /* Coordinators */ = {
+			isa = PBXGroup;
+			children = (
+				50BD1B152670A17200660ECE /* BaseCoordinator.swift */,
+				50AFA8D226708C3700B4CB50 /* AppCoordinator.swift */,
+				50BD1B172670A1FD00660ECE /* ViewCoordinator.swift */,
+			);
+			path = Coordinators;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -266,9 +286,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				50BD1B132670962B00660ECE /* ViewModel.swift in Sources */,
+				50BD1B162670A17200660ECE /* BaseCoordinator.swift in Sources */,
+				50AFA8D326708C3700B4CB50 /* AppCoordinator.swift in Sources */,
 				508F8C5F267073A900E916F0 /* ViewController.swift in Sources */,
 				508F8C5B267073A900E916F0 /* AppDelegate.swift in Sources */,
 				508F8C5D267073A900E916F0 /* SceneDelegate.swift in Sources */,
+				50BD1B182670A1FD00660ECE /* ViewCoordinator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

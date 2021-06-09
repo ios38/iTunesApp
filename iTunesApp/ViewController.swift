@@ -8,13 +8,12 @@
 import UIKit
 
 class ViewController: UIViewController {
+    var viewModel: ViewModelProtocol!
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        navigationItem.title = "ViewController"
+        navigationItem.title = viewModel.title
     }
-
-
 }
 
