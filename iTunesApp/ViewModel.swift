@@ -7,14 +7,45 @@
 
 import Foundation
 
-protocol ViewModelProtocol: AnyObject {
-    var title: String? { get }
+struct Item {
+    var name: String
 }
 
-class ViewModel: ViewModelProtocol {
-    var title: String?
+protocol ViewModelProtocol: AnyObject {
+    //input
+    var searchText: String? { get set }
+    var onItemsUpdated: ()->() { get set }
+
+    //output
+    var items: [Item] { get }
     
-    init(title: String) {
-        self.title = "Title"
+}
+
+final class ViewModel: ViewModelProtocol {
+    var onItemsUpdated: () -> () = { }
+    
+    var searchText: String? {
+        didSet {
+            if let searchText = searchText, searchText.count > 0 {
+                self.items = loadItems().filter({ $0.name.contains(searchText) })
+            } else {
+                self.items = loadItems()
+            }
+            onItemsUpdated()
+        }
+    }
+    
+    var items: [Item] = []
+    
+    init() {
+        self.items = loadItems()
+    }
+    
+    func loadItems() -> [Item] {
+        var items: [Item] = []
+        (1...50).forEach { i in
+            items.append(Item(name: "Item #\(i)"))
+        }
+        return items
     }
 }

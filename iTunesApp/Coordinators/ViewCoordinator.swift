@@ -12,7 +12,7 @@ class ViewCoordinator: BaseCoordinator {
         let viewController = ViewController()
         
         // Coordinator initializes and injects viewModel
-        let viewModel = ViewModel(title: "Title")
+        let viewModel = ViewModel()
         viewController.viewModel = viewModel
 
         self.navigationController.viewControllers = [viewController]
