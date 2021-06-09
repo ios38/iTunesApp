@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -14,6 +14,8 @@
 		508F8C67267073AA00E916F0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 508F8C65267073AA00E916F0 /* LaunchScreen.storyboard */; };
 		508F8C72267073AA00E916F0 /* iTunesAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 508F8C71267073AA00E916F0 /* iTunesAppTests.swift */; };
 		508F8C7D267073AA00E916F0 /* iTunesAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 508F8C7C267073AA00E916F0 /* iTunesAppUITests.swift */; };
+		508F8C8C267075C600E916F0 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 508F8C8B267075C600E916F0 /* SnapKit */; };
+		508F8C8F267075F100E916F0 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 508F8C8E267075F100E916F0 /* Alamofire */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +56,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				508F8C8C267075C600E916F0 /* SnapKit in Frameworks */,
+				508F8C8F267075F100E916F0 /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -141,6 +145,10 @@
 			dependencies = (
 			);
 			name = iTunesApp;
+			packageProductDependencies = (
+				508F8C8B267075C600E916F0 /* SnapKit */,
+				508F8C8E267075F100E916F0 /* Alamofire */,
+			);
 			productName = iTunesApp;
 			productReference = 508F8C57267073A900E916F0 /* iTunesApp.app */;
 			productType = "com.apple.product-type.application";
@@ -212,6 +220,10 @@
 				Base,
 			);
 			mainGroup = 508F8C4E267073A900E916F0;
+			packageReferences = (
+				508F8C8A267075C600E916F0 /* XCRemoteSwiftPackageReference "SnapKit" */,
+				508F8C8D267075F100E916F0 /* XCRemoteSwiftPackageReference "Alamofire" */,
+			);
 			productRefGroup = 508F8C58267073A900E916F0 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -581,6 +593,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		508F8C8A267075C600E916F0 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.1;
+			};
+		};
+		508F8C8D267075F100E916F0 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.4.3;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		508F8C8B267075C600E916F0 /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 508F8C8A267075C600E916F0 /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+		508F8C8E267075F100E916F0 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 508F8C8D267075F100E916F0 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 508F8C4F267073A900E916F0 /* Project object */;
 }
